@@ -25,10 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      - name: Run a Markdown lint
+      - name: Run markdown lint
         run: |
-          npm install remark-cli remark-present-lint-consistent
-          npx remark . --use remark-present-lint-consistent --f
+          npm install remark-cli remark-preset-lint-consistent
+          npx remark . --use remark-preset-lint-consistent --frail
 
       # # Runs a single command using the runners shell
       # - name: Run a one-line script
